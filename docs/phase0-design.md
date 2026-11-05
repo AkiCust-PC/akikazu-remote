@@ -335,7 +335,7 @@ DataChannel label：`akikazu-phase0`
 ### 8.5 发布物体积
 
 - `cargo build --release`，`+crt-static`。
-- 3,818,496 bytes / 3.64 MiB。
+- 3,819,008 bytes / 3.64 MiB。
 - `dumpbin /dependents`：仅 `kernel32`、`ws2_32`、`bcrypt`、`IPHLPAPI`、`ADVAPI32`、`ntdll` 等系统 DLL；无 `VCRUNTIME140.dll`。
 - 3 秒采样：Working Set 8.4–8.9 MiB，Private 2.2 MiB。
 

@@ -206,7 +206,7 @@ Phase 0 只适合实验室和自有设备测试，不能直接给客户使用。
 
 | 项目 | 结果 |
 |---|---|
-| EXE 体积 | 3,818,496 bytes / 3.64 MiB |
+| EXE 体积 | 3,819,008 bytes / 3.64 MiB |
 | 依赖 | 仅 Windows 系统 DLL；无 VC++ Redistributable、无第三方 DLL |
 | 内存（3 秒采样） | 每进程 Working Set 约 8.4–8.9 MiB，Private 约 2.2 MiB |
 | CPU | 采样时 0 |
