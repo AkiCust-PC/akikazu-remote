@@ -346,6 +346,11 @@ pub async fn run(
         notes.push(format!("ignored {binary_messages} binary message(s)"));
     }
 
+    let selected_path = match selected_path {
+        Some(path) => Some(path),
+        None => detect_selected_path(&pc).await,
+    };
+
     let _ = tokio::time::timeout(
         Duration::from_secs(1),
         data_channel.send_text(
@@ -358,11 +363,6 @@ pub async fn run(
     .await;
     let _ = tokio::time::timeout(Duration::from_secs(2), data_channel.close()).await;
     let _ = tokio::time::timeout(Duration::from_secs(3), pc.close()).await;
-
-    let selected_path = match selected_path {
-        Some(path) => Some(path),
-        None => detect_selected_path(&pc).await,
-    };
 
     let report = SessionReport {
         schema_version: 1,
